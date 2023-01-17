@@ -22,6 +22,7 @@ ellipse(425, 448, 30, 55);
 strokeWeight(10);
 line(66, 420, 538, 420);
 
+// mouth
 strokeWeight(0);
 beginShape();
 vertex(250, 600);
