@@ -1,0 +1,85 @@
+// function eye(x, y, z) {
+//   fill(255, 255, 255);
+//   stroke(0, 0, 0);
+//   ellipse(x, y, z);
+
+//   fill(0, 0, 0);
+//   ellipse(x, y, z - 10);
+// }
+
+// let leftEyeX = 50;
+// eye(leftEyeX);
+// eye(leftEyeX, 100, 30);
+// eye(150, 200, 20);
+
+function face(x, y, s) {
+  fill(255, 0, 0);
+  ellipse(x, y, s);
+  fill(0, 0, 255);
+  ellipse(x, y, s / 2);
+}
+// face(200, 200, 100);
+// face(100, 200, 30);
+// face(300, 300, 200);
+
+let x = 100;
+let y = 150;
+let s = 50;
+
+//drawing stuff animation
+
+// function draw() {
+//   clear();
+//   face(x, y, s);
+//   face(x + 100, y, s);
+
+//   x += 2;
+//   y += 1;
+//   s = s + 0.5;
+// }
+
+// drawing stuff with mouse
+// function draw() {
+//   background(0, 100, 130, 100);
+//   fill(0, 254, 0);
+//   face(mouseX, mouseY, 50);
+//   fill(255, 0, 0);
+//   rect(mouseX, mouseY, 10, 10);
+// }
+
+//making the shape bigger and smaller depending on cursor
+// function draw() {
+//   clear();
+//   face(width / 2, height / 2, mouseY);
+// }
+
+let xPosition = 0;
+let yPosition = 0;
+function draw() {
+  if (mouseX > width / 2) {
+    background(255, 255, 255);
+  } else {
+    background(0, 50, 0);
+  }
+  //   clear();
+  strokeWeight(8);
+  stroke(mouseX * 255, 0, mouseY);
+  //   fill(255, 255, 0);
+  //   rect(xPosition, yPosition, mouseX, mouseY);
+  line(xPosition, yPosition, mouseX, mouseY);
+
+  xPosition = mouseX;
+  yPosition = mouseY;
+}
+
+// function mousePressed() {
+//   sizeLmao += 10;
+//   console.log("halloj");
+// }
+
+// let sizeLmao = 20;
+
+// function draw() {
+//   clear();
+//   ellipse(mouseX, mouseY, sizeLmao);
+// }
