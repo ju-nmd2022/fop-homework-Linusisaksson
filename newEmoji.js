@@ -60,7 +60,7 @@ function draw() {
     y -= 6;
   }
   background(255, 255, 255);
-  emoji(x, y, 1.0, mouseIsPressed);
+  emoji(x, y, 1, mouseIsPressed);
 }
 
 // function keyPressed() {
